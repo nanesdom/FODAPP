@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FODAPP</title>	
+	<meta charset="utf-8">	
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, maximum-scale=1, minimum-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="css/estilosTestCognitivo.css">
+	<script src="js/funciones.js"></script>
+	<script src="js/load.js"></script>
+	<script src="js/funcionesTestCognitivo.js"></script>
+	<script type="text/javascript" src="js/Chart-js/Chart.js"></script>
+	<link rel="icon" type="image/png" href="media/logo.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="media/logo.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="media/logo.png" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="apple-touch-icon" href="media/logo.png">
+	<!-- <meta http-equiv="Content-Security-Policy" content="
+		default-src 'self'; 
+		script-src 'self' 'unsafe-inline'; 
+		style-src 'self' ; 
+		img-src *; 
+		font-src *;
+		connect-src *
+	"> -->
+</head>
+<body onload="load(), startTest()">
+	<div id="mensaje"></div>
+	<div id="mensaje2"></div>
+
+	<div class="cont" id="contIndex">
+		<header>
+			<img src="media/logo.png" class="logo"> <b>FODAPP</b>	
+			<b class="right" onclick="salir()">Salir</b> 		
+
+		</header>
+		<div class="presentacion">
+			<img src="media/fondo.jpg" class="imgFondo">
+			<div class="filter"></div>
+			<section class="perfil">
+				<input type="text" name="" value="Daniel Dominguez" id="name" disabled=""><br><br>
+				<b>Expediente: </b><input type="text" name="" value="255382" disabled="" id="correo"><br><br>	
+				<button class="btn1" id="test22" onclick="openTest('test2', 'test22')">Test Económico</button>	
+				<button class="btn1" id="test33" onclick="openTest('test3', 'test33')">Test Congnitivo</button>			
+				<button class="btn1" id="test44" onclick="openTest('test4', 'test44')">Test Emocional</button>	
+				<button class="btn2" id="test55" onclick="verRes()">Resultado</button>			
+			</section>
+		</div>
+		<div class="cursos" id="test1">
+						
+			<div class="add">	
+				<h1>¡Bienvenido <b id="showName">Daniel</b>!</h1> <br><br>
+					<h3>Nos importa tu situación académica</h3> <br><br><br> <!-- esta es mas o menos la estructura -->
+						<h2>Esta pequeña aplicación nos ayudará a conocer tu situación académica y así poder darte algunos pequeños consejos sobre el riesgo que pudiera tener tu futuro. Esto con la finalidad de que no dejes de estudiar por problemas económicos, cognitivos o emocionales. <br><br>
+
+						¡Ayúdanos a ayudarte!</h2> <br><br><br>
+					<button class="large btn3" onclick="openTest('test2', 'test22')">Iniciar Diagnóstico</button>		
+
+			</div>	
+		</div>
+		<div class="cursos" id="test2">
+			
+			<div class="add">	
+				<h1>Test Económico</h1>
+					<h3>Promedio de ingresos de tu familia al mes:</h3> <!-- esta es mas o menos la estructura -->
+					<input type="range" min="0" max="20000" name="" value="10000" class="large" placeholder="Pregunta" onchange="range()" id="range"> <!-- esta es mas o menos la estructura --><h4>Ingreso familiar mensual: <b id="showRange">$10000</b></h4>
+					<h4>$<input type="number" name="" class="short" placeholder="Ingreso Mensual" id="inpRange" value="10000" onchange="range2()"></h4>
+
+					<br><br>
+
+					<h3>¿Cuáles son los elementos débiles en tu economía?</h3>
+						<h4><input type="checkbox" name="hola" value="Solo una persona de mi familia trabaja" id="chk1" class="large" placeholder="Pregunta">Solo una persona de mi familia trabaja </h4>
+						<h4><input type="checkbox" name="hola" value="No tengo papás que me apoyen" id="chk2" class="large" placeholder="Pregunta">No tengo papás que me apoyen </h4>
+						<h4><input type="checkbox" name="hola" value="Mis papás están desempleados" id="chk3" class="large" placeholder="Pregunta">Mis papás están desempleados </h4>
+						<h4><input type="checkbox" name="hola" value="No tengo suficiente para comer" id="chk4" class="large" placeholder="Pregunta">No tengo suficiente para comer </h4>
+						<h4><input type="checkbox" name="hola" value="El transporte a la escuela es caro" id="chk5" class="large" placeholder="Pregunta">El transporte a la escuela es caro </h4>
+						<h4><input type="checkbox" name="hola" value="Mi casa está muy lejos de la escuela" id="chk6" class="large" placeholder="Pregunta">Mi casa está muy lejos de la escuela </h4>
+						<h4><input type="checkbox" name="hola" value="No tengo ingresos económicos extras" id="chk7" class="large" placeholder="Pregunta">No tengo ingresos económicos extras </h4>
+
+
+						<br><br>
+
+					<h3>¿Cuáles son los aspectos fuertes de tu economía?</h3>
+						<h4><input type="checkbox" name="hola" value="Tengo trabajo" id="chk8" class="large" placeholder="Pregunta">Tengo trabajo </h4>
+						<h4><input type="checkbox" name="hola" value="Mis papás tienen trabajo" id="chk9" class="large" placeholder="Pregunta">Mis papás tienen trabajo</h4>
+						<h4><input type="checkbox" name="hola" value="Sí tengo papás que me apoyen" id="chk10" class="large" placeholder="Pregunta">Sí tengo papás que me apoyen</h4>
+						<h4><input type="checkbox" name="hola" value="Mis dos papás trabajan" id="chk11" class="large" placeholder="Pregunta">Mis dos papás trabajan</h4>
+						<h4><input type="checkbox" name="hola" value="Me es fácil transportarme a la escuela" id="chk12" class="large" placeholder="Pregunta">Me es fácil transportarme a la escuela </h4>
+						<h4><input type="checkbox" name="hola" value="Mi casa está cerca de la escuela" id="chk13" class="large" placeholder="Pregunta">Mi casa está cerca de la escuela </h4>
+						<h4><input type="checkbox" name="hola" value="Tengo ingresos económicos extras" id="chk14" class="large" placeholder="Pregunta">Tengo ingresos económicos extras </h4>
+
+						<br><br>
+
+					<h3>¿Qué riesgos existen? </h3>
+						<h4><input type="checkbox" name="hola" value="Puede que mis papás se queden sin trabajo" id="chk15" class="large" placeholder="Pregunta">Puede que mis papás se queden sin trabajo </h4>
+						<h4><input type="checkbox" name="hola" value="Puede que yo me quede sin trabajo" id="chk16" class="large" placeholder="Pregunta">Puede que yo me quede sin trabajo </h4>
+						<h4><input type="checkbox" name="hola" value="Mis papás se pueden enfermar" id="chk17" class="large" placeholder="Pregunta">Mis papás se pueden enfermar </h4>
+						<h4><input type="checkbox" name="hola" value="Me voy a ir de la casa" id="chk18" class="large" placeholder="Pregunta">Me voy a ir de la casa</h4>
+						<h4><input type="checkbox" name="hola" value="No puedo conseguir trabajo" id="chk19" class="large" placeholder="Pregunta">No puedo conseguir trabajo</h4>
+						<h4><input type="checkbox" name="hola" value="Aumente la colegiatura" id="chk20" class="large" placeholder="Pregunta">Aumente la colegiatura</h4>
+						<h4><input type="checkbox" name="hola" value="No tenga recursos para obtener material de la escuela" id="chk21" class="large" placeholder="Pregunta">No tenga recursos para obtener material de la escuela </h4>
+
+						<br><br>
+
+					<h3>¿Qué oportunidades visualizas? </h3>
+						<h4><input type="checkbox" name="hola" value="Puedo conseguir trabajo" id="chk22" class="large" placeholder="Pregunta">Puedo conseguir trabajo</h4>
+						<h4><input type="checkbox" name="hola" value="Puede que aumenten el sueldo de mis papás" id="chk23" class="large" placeholder="Pregunta">Puede que aumenten el sueldo de mis papás </h4>
+						<h4><input type="checkbox" name="hola" value="Mis papás pueden obtener aguinaldo" id="chk24" class="large" placeholder="Pregunta">Mis papás pueden obtener aguinaldo </h4>
+						<h4><input type="checkbox" name="hola" value="Me quedaré en casa" id="chk25" class="large" placeholder="Pregunta">Me quedaré en casa </h4>
+						<h4><input type="checkbox" name="hola" value="Obtener una beca" id="chk26" class="large" placeholder="Pregunta">Obtener una beca </h4>
+						<h4><input type="checkbox" name="hola" value="Puedo obtener patrocinios" id="chk27" class="large" placeholder="Pregunta">Puedo obtener patrocinios </h4>
+
+						<br><br>
+
+					<button class="large btn3" onclick="test1()" id="btnEco">Ver Resultado</button>		
+
+			</div>	
+		</div>
+		<div class="cursos" id="test3">
+			
+			<div class="add">
+			<h1>Test Cognitivo</h1>	
+					<div class="moduleTest">
+		<div class="imageTest"><img src="" id="imgTest"></div>
+		<div class="questionsTest">
+			<div class="questionsTest2" id="questTest">
+				
+			</div>
+		</div>
+		<div class="bottomTest" id="btnSig">
+			<div class="checkImage firstChk"><img src="sourcesCognitivo/unchk.png" class="ckImg"></div>
+			<div class="checkImage"><img src="sourcesCognitivo/unchk.png" class="ckImg"></div>
+			<div class="checkImage"><img src="sourcesCognitivo/unchk.png" class="ckImg"></div>
+			<div class="checkImage"><img src="sourcesCognitivo/unchk.png" class="ckImg"></div>
+			<div class="checkImage"><img src="sourcesCognitivo/unchk.png" class="ckImg"></div>
+			<div class="checkImage"><img src="sourcesCognitivo/unchk.png" class="ckImg"></div>
+			<div class="checkImage"><img src="sourcesCognitivo/unchk.png" class="ckImg"></div>
+			<div class="checkImage"><img src="sourcesCognitivo/unchk.png" class="ckImg"></div>
+			<div class="checkImage"><img src="sourcesCognitivo/unchk.png" class="ckImg"></div>
+			<div class="checkImage"><img src="sourcesCognitivo/unchk.png" class="ckImg"></div>
+			<button class="btn2 short btnSig" onclick="checkAns()" id="btnSig">Siguiente</button>
+		</div>
+		<button class="btn1 large" onclick="openTest('test4', 'test44')" id="btnEmo">Ir al Test Emocional</button>
+	</div>	
+
+			</div>	
+		</div>
+		<div class="cursos" id="test4">
+			
+			<div class="add">	
+				<h1>Test Emocional</h1>
+				<div id="resEmo">
+					<h2 >
+						<b>
+1. Si acaba de tener una idea que le parece muy interesante, ¿qué actitud toma?
+
+						</b><br>
+
+						<input type="radio" id="p1" name="1p" value="1" checked=""> a. Necesita que otras personas la aprueban, para seguir pensando qué va a hacer.
+
+<br>
+						<input type="radio" id="p1" name="1p" value="2"> b. La revisa por los cuatro costados, con personas idóneas, y luego comienza la acción.
+
+<br>
+						<input type="radio" id="p1" name="1p" value="3"> c. Se larga de inmediato a su ejecución.
+
+ <br>	
+						<input type="radio" id="p1" name="1p" value="4"> d. La deja para otra oportunidad, por miedo a equivocarse, porque la ve muy audaz, por inhibición, etc.	<br>		
+					</h2><br>
+					<h2 >
+						<b>
+2. Al enfrentar dificultades, ¿cómo reacciona?
+
+						</b><br>
+
+						<input type="radio" id="p2" name="2p" value="1" checked=""> a. Sale corriendo.
+
+<br>
+						<input type="radio" id="p2" name="2p" value="2"> b. Se angustia.
+
+<br>
+						<input type="radio" id="p2" name="2p" value="3"> c. Se ve estimulado, como el toro ante el color rojo.
+
+ <br>	
+						<input type="radio" id="p2" name="2p" value="4"> d. Se mantiene sereno, y toma distancia para reflexionar en busca de la solución.<br>
+
+				
+					</h2><br>
+					<h2 >
+						<b>
+3. A la pregunta clásica: ante una botella de vino que contiene exactamente la mitad de su capacidad, ¿qué dice?
+
+						</b><br>
+
+						<input type="radio" id="p3" name="3p" value="1" checked=""> a. Está medio llena.
+
+<br>
+						<input type="radio" id="p3" name="3p" value="2"> b. Está medio vacía.
+
+<br>
+						<input type="radio" id="p3" name="3p" value="3"> c. Qué lástima, podría estar llena.
+
+ <br>	
+						<input type="radio" id="p3" name="3p" value="4"> d. Qué suerte, podría estar vacía.<br>
+
+				
+					</h2><br>
+					<h2 >
+						<b>
+4. Si usted visualiza con la mente una pared que le cierra el camino, ¿qué piensa a continuación?
+
+						</b><br>
+
+						<input type="radio" id="p4" name="4p" value="1" checked=""> a. Se siente incapaz de seguir adelante.
+
+<br>
+						<input type="radio" id="p4" name="4p" value="2"> b. Tiene la sensación de que se le va a caer encima.
+
+<br>
+						<input type="radio" id="p4" name="4p" value="3"> c. Idea una forma de rodearla y seguir adelante.
+
+ <br>	
+						<input type="radio" id="p4" name="4p" value="4"> d. Piensa en cómo tirarla abajo.<br>
+
+				
+					</h2><br>
+					<h2 >
+						<b>
+5. Acaba de ser rechazada/o para un puesto laboral, y al estar en la calle piensa o siente:
+
+						</b><br>
+
+						<input type="radio" id="p5" name="5p" value="1" checked=""> a. Quizá no soy lo suficientemente capaz para este tipo de trabajo.
+
+<br>
+						<input type="radio" id="p5" name="5p" value="2"> b. Debo descubrir algunas fallas en mí, y superarlas.
+
+<br>
+						<input type="radio" id="p5" name="5p" value="3"> c. Cada persona tiene un trabajo que la está esperando, y llega más tarde o más temprano.
+
+ <br>	
+						<input type="radio" id="p5" name="5p" value="4"> d. Yo nunca tengo suerte.<br>
+
+				
+					</h2><br>
+					<h2 >
+						<b>
+6. ¿Qué frase aplicaría o aplica más, en general, ante las circunstancias de la vida?
+
+						</b><br>
+
+						<input type="radio" id="p6" name="6p" value="1" checked=""> a. Siempre que llovió paró.
+
+<br>
+						<input type="radio" id="p6" name="6p" value="2"> b. Todo lo bueno se termina.
+
+<br>
+						<input type="radio" id="p6" name="6p" value="3"> c. Los sueños, sueños son.
+
+ <br>	
+						<input type="radio" id="p6" name="6p" value="4"> d. Lo último que se pierde es la esperanza.<br>
+
+			
+					</h2><br>
+					<h2 >
+						<b>
+7. Un familiar o amigo le dijo que volvería a las 10, son las once y media y todavía no ha llegado. ¿Qué actitud toma?
+
+						</b><br>
+
+						<input type="radio" id="p7" name="7p" value="1" checked=""> a. Piensa inmediatamente que le pasó algo y en cualquier momento llama a la policía.
+
+<br>
+						<input type="radio" id="p7" name="7p" value="2"> b. Empieza a preocuparse.
+
+<br>
+						<input type="radio" id="p7" name="7p" value="3"> c. Se pone a enumerar todas las razones comunes por las cuales puede haberse producido la demora.
+
+ <br>	
+						<input type="radio" id="p7" name="7p" value="4"> d. Se pone a mirar TV sin pensar en el asunto. <br>
+
+			
+					</h2><br>
+
+					<h2 >
+						<b>
+8. Acaba de discutir agriamente con una persona, a la que tendrá que seguir tratando, y luego de la disputa piensa:
+
+						</b><br>
+
+						<input type="radio" id="p8" name="8p" value="1" checked=""> a. Lo voy a mandar a…
+
+<br>
+						<input type="radio" id="p8" name="8p" value="2"> b. Bien, ya pasó…
+
+<br>
+						<input type="radio" id="p8" name="8p" value="3"> c. ¿Cómo no entiende que tengo toda la razón?
+
+ <br>	
+						<input type="radio" id="p8" name="8p" value="4"> d. Voy a repasar toda la discusión. Seguramente, debe haber puntos en los que puedo estar equivocado. Si es así, le pediré disculpas y olvidaremos bien todo el asunto. <br>
+
+				
+					</h2>
+				</div>
+					<button class="large btn3" onclick="test3()" id="btnRes">Ver Resultado</button>		
+
+			</div>	
+		</div>
+
+		<div class="cursos" id="test5">
+			
+			<div class="add">	
+				<h1>Resultado Test Económico</h1>
+				<div class="F" >
+					<h3 id="fofo">F</h3 id="fofo">
+					<div id="F">
+						<h5>No marcaste nada...</h5>
+					</div>
+				</div>
+				<div class="O" >
+					<h3 id="fofo">O</h3 id="fofo">
+					<div id="O">
+						<h5>No marcaste nada...</h5>
+					</div>
+				</div>
+				<div class="D" >
+					<h3 id="fofo">D</h3 id="fofo">
+					<div id="D">
+						<h5>No marcaste nada...</h5>
+					</div>
+				</div>
+				<div class="A" >
+					<h3 id="fofo">A</h3 id="fofo">
+					<div id="A">
+						<h5>No marcaste nada...</h5>
+					</div>
+				</div>	
+				<div class="resp">
+					<h6 id="foda">Tienes mas oportunidades que todo, así que aprovechalas!!!</h6>	
+					<h6 id="prom">No te preocupes por el dinero, gestionaremos una beca para ti.</h6>				
+				</div>
+				<button class="btn1 large" onclick="openTest('test3', 'test33')">Ir al Test Cognitivo</button>
+				
+
+			</div>	
+		</div>
+
+		<div class="cursos" id="test8">
+			
+			<div class="add" id="superRes">	
+				<h1>Resultado Final <i class="fa fa-times" aria-hidden="true" onclick="openTest('test4', 'test44')"></i></h1>
+				<div id="resFinal">
+					<canvas id="marksChart" ></canvas>
+				</div>		
+				<div id="resFinal2">
+					
+				</div>
+			</div>	
+		</div>
+
+	</div>
+</body>
+</html>

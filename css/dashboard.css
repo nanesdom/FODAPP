@@ -1,0 +1,304 @@
+.cursos{
+	width: calc(70% );
+	height: 80%;
+	position: absolute;
+	left: 30%;
+	top: 10%;
+	text-align: center;
+	background: transparent;
+	overflow: hidden;
+}
+
+.cursos h1{
+	font-size: 4em;
+	margin: 20px;
+	color: var(--color-fondo);
+	font-weight: lighter;	
+	height: 15%;
+}
+
+.cursos h3{
+	font-size: 2vw;
+	color: var(--color-contraste);
+	font-weight: lighter;	
+	text-transform: capitalize;
+}
+
+.lista{
+	width: 100%;
+	height: 80%;
+	overflow-y: auto;
+}
+
+.curso{
+	width: 95%;
+	height: 100px;
+	background: var(--color-fondo);
+	font-size: 2em;
+	line-height: 100px;
+	text-align: left;
+	padding-left: 50px;
+	padding-right: 50px;
+	font-weight: lighter;
+	display: inline-flex;
+	margin-top: 20px;	
+}
+.curso h3{
+	font-weight: lighter;
+	color: var(--color-medio);
+	width: 60%;
+	height: 100%;
+}
+
+.curso select{
+	background: transparent !important;
+	border: none !important;
+	width: 18% !important;
+	height: 90% !important;
+	border-bottom: 1px solid var(--color-fuerte) !important;
+	font-size: 1em !important;
+	text-align: center !important;
+	color: black !important;
+	margin: 0px !important;
+}
+
+.curso button{
+	width: 20%;
+	margin-left: 2%;
+	height: 80px !important;
+	margin-top: 10px !important;
+	outline: none;
+	border: none;
+	border-radius: 10px;
+	font-size: 2.5vw !important;
+	font-weight: lighter;
+	float: right !important;
+	position: relative;
+}
+
+.perfil{
+	position: fixed;
+	left: 50px;
+	top: 15%;
+	height: 70%;
+	width: 25%;
+	color: white;
+	font-size: 2em;
+	text-align: center;
+}
+
+.perfil input{
+	background: transparent;
+	border: none;
+	width: 100%;
+	height: 50px;
+	color: white;
+	font-size: .8em;
+	text-align: center;
+}
+
+.perfil b{
+	width: 30%;
+	height: 50px;
+	font-weight: lighter;
+	color: var(--color-contraste2);
+}
+.perfil #name{
+	width: 100%;
+	height: 50px;
+	font-size: 1.5vw;
+	color: var(--color-contraste);
+	text-transform: capitalize;
+}
+
+.perfil img{
+/*	border-radius: 50%;*/
+	width: 250px;
+	height: 250px;
+	text-align: center;
+	margin: 20px;
+	align-self: center;
+}
+
+.perfil button{
+	width: 100%;
+	height: 50px;
+	outline: none;
+	border: none;
+	margin-top: 20px;
+	font-size: .8em;
+}
+
+.perfil #correo{
+	font-size: 1.5vw;
+}
+
+.curso button:hover{
+	background: var(--color-contraste2);
+	color: white;
+}
+
+.perfil #editPerfil{
+	z-index: 1;
+	opacity: 1;
+	display: all;
+}
+.perfil #savePerfil{
+	z-index: 0;
+	opacity: 0;
+	display: none;
+		
+}
+
+.perfil button:hover{
+	background: var(--color-contraste2);
+	color: white;
+}
+
+.perfil h6{
+	font-weight: lighter;
+	font-style: italic;
+	margin-top: -20px;
+	display: none;
+	cursor: pointer;
+	font-size: 1vw;
+}
+
+.perfil h6:hover{
+	color: var(--color-contraste2);
+}
+
+#step2, #step3, #step4, #step5, #test2, #test3, #test4, #test5, #test6, #test7, #test8{
+	display: none;
+}
+.add{
+	width: 100% !important;
+	height: 100% !important;
+}
+
+.add h4{
+	color: white;
+	font-size: 1vw;
+	text-align: left;
+	margin-left: 10%;
+	font-weight: lighter;
+}
+
+.add h2{
+	color: white;
+	font-size: 1.4vw;
+	text-align: justify;
+	margin-right: 10%;
+	margin-left: 10%;
+	font-weight: lighter;
+}
+
+.add h2 b{
+	color: var(--color-contraste);
+}
+.add h5{
+	color: var(--color-contraste);
+	font-size: 1vw;
+	text-align: left;
+	font-weight: lighter;
+	margin-left: 10px;
+	margin-right: 5px;
+}
+
+.add h6{
+	color: var(--color-fondo);
+	font-size: 1.2vw;
+	text-align: center;
+	font-weight: lighter;
+}
+
+.F, .O, .D, .A{
+	width: 40%;
+	height: 30%;
+	position: relative;
+	float: left;
+} 
+
+
+.F, .O{
+	border-bottom: 1px solid white;
+}
+
+.O, .A{
+	border-left:  1px solid white;
+	margin-right: 5%;
+}
+
+.F, .D{
+	margin-left: 10%;
+}
+.resp{
+	width: 80%;
+	height: 150px;
+	position: relative;
+	float: left;
+	margin-left: 10%;
+	text-align: center;
+	margin-top: 30px;
+} 
+#fofo{
+	color: white !important;
+}
+
+input[type="radio"] {
+    -ms-transform: scale(2); /* IE 9 */
+    -webkit-transform: scale(2); /* Chrome, Safari, Opera */
+    transform: scale(2);
+}
+
+#resFinal{
+	width: 90%;
+	height: 80%;
+	position: absolute;
+	left: 0px;
+	bottom: 10%;
+}
+
+#resFinal2{
+	width: 100%;
+	height: 20%;
+	position: absolute;
+	left: 0px;
+	bottom: -5%;
+}
+
+#marksChart{
+	width: 100% !important;
+	height: 90% !important;
+	position: absolute;
+	left: 5%;
+	bottom: 0px;
+	background: transparent;
+}
+
+#superRes{
+	width: 90% !important;
+	height: 90% !important;
+	position: fixed;
+	left: 5%;
+	top: 5%;
+	background: rgba(255,255,255,.9);
+	color: black !important;
+}
+
+#superRes h1, #superRes h2{
+	color: black !important;
+	z-index: 999999999999;
+}
+
+#superRes i{
+	float: right;
+	margin: 20px;
+	color: red;
+	cursor: pointer;
+	z-index: 99999999999999;
+}
+
+#superRes b{
+	color: var(--color-contraste2);
+}

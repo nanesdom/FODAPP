@@ -1,0 +1,119 @@
+*
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+img
+{
+	width: 100%;
+}
+
+.moduleTest
+{
+	background: rgba(0, 0, 0, 0);
+	height: 100%;
+	width: 100%;
+}
+
+.imageTest
+{
+	float: left;
+	width: 36%;
+	margin-left: 7%;
+	margin-right: 7%;
+	padding-top: 50px;
+	height: calc(60% - 50px);
+	overflow: hidden;
+
+}
+
+.questionsTest
+{
+	background: transparent;
+	float: left;
+	width: 50%;
+	height: 60%;
+	overflow: hidden;
+}
+
+.questionsTest2
+{
+	float: left;
+	width: 90%;
+	margin-left: 5%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0);
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.questionsTest2 > h2
+{
+	color: white;
+	text-align: center;
+	float: left;
+	width: 100%;
+}
+
+.questionsTest2 > input
+{
+	margin-top: 20px;
+	float: left;
+	height: 40px;
+	width: 40px;
+}
+
+.questionsTest2 > h3
+{
+	float: left;
+	width: calc(100% - 55px);
+	margin-top: 20px;
+	margin-left: 15px;
+	color:  white;
+	line-height: 40px;
+}
+
+.bottomTest
+{
+	float: left;
+	width: 100%;
+	height: 120px;
+}
+
+.btnSig
+{
+	/*display: none;*/
+	float: right;
+	height: 80%;
+	width: 25%;
+	margin-top: 10%;
+	margin-right: 10%;
+}
+
+#btnEmo{
+	display: none;
+}
+
+
+.checkImage
+{
+	float: left;
+	height: 40px;
+	width: 40px;
+	margin-top: 40px;
+	margin-left: 20px;
+	filter: invert(100%);
+}
+
+.firstChk
+{
+	margin-left: 7% !important;
+}
+
+.textRes
+{
+	color: white;
+	text-align: left !important;
+	font-size: 1.3em;
+}
